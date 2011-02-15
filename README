@@ -1,0 +1,30 @@
+
+<< Location Manager Hijacker for iPhone development >>
+
+Using this module, you can control the location data that the CLLocationManager return to your application,
+by an web browser on another machine on the same local network.
+
+This module is exceptionally easy to install. And it doesn't need any changes to your code.
+
+
+To install this feature
+
+1. add CLLocationManager+HijackAll.m to your application's project
+2. add libcocoahttpserver.a to your project
+3. add CoreLocation and CFNetwork frameworks.
+4. check that the DEBUG preprocessor macro is enabled for your Debug build.
+
+To control the location
+
+1. execute your application
+2. an alert shows the controller URL.
+3. open the URL on an another machine that is on the same Wifi Network
+4. you can easily control the location, using the map on the page.
+
+
+Notes
+- This feature can be usable on Wifi network only. Your iPhone and the controlling machine should be exist in the same network.
+- This feature is enabled when the macro DEBUG is enabled. You can change this behavior by changing #ifdef DEBUG in the CLLocationManager+HijackAll.m on the top of the code.
+
+Develop by Makoto Hamanaka<m-hamanaka@tonchidot.com>
+Design by KAWACHI Takashi<kawachi@tonchidot.com>
